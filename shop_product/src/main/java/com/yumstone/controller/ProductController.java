@@ -22,4 +22,5 @@ public class ProductController {
         log.info("商品信息查询，商品id={}",pid);
         return productService.findByPid(pid);
     }
+
 }

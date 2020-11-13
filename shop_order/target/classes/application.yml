@@ -1,5 +1,7 @@
 server:
   port: 8091
+  tomcat:
+    max-threads: 10
 spring:
   application:
     name: service-order
@@ -14,3 +16,14 @@ spring:
         hbm2ddl:
           auto: update
           dialect: org.hibernate.dialect.MySQLSInnoDBDialect
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.98.107.200:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 9999
+feign:
+  sentinel:
+    enabled: true

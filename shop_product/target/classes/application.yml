@@ -14,3 +14,7 @@ spring:
         hbm2ddl:
           auto: update
           dialect: org.hibernate.dialect.MySQLSInnoDBDialect
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.98.107.200:8848
